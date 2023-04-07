@@ -5,8 +5,8 @@
             <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
             <!-- <h1 class="mb-0">What Our Clients Say About Our Digital Services</h1> -->
         </div>
-        @foreach ($testimonial as $test)
         <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+            @foreach ($testimonial as $test)
             <div class="testimonial-item bg-light my-4">
                 <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
                     <img class="img-fluid rounded" src="{{ $test->banner_image ?? '' }}" style="width: 60px; height: 60px;">
@@ -20,8 +20,8 @@
                     
                 </div>
             </div>
+            @endforeach
         </div>
-        @endforeach
     </div>
 </div>
 <!-- Testimonial End -->
