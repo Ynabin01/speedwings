@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home1/demoradiantnepal/speedwingshr.demo.radiantnepal.com/
-    - /bin/cp -r * $DEPLOYPATH 
+    - /bin/cp -r * $DEPLOYPATH

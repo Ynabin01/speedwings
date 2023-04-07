@@ -412,7 +412,7 @@ class HomeController extends Controller
         else{
              $subcategory_type = null;
          }
-         
+          
         if($subcategory_type == "Photo Gallery"){
             // return "return to page gallary";
            

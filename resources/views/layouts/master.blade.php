@@ -118,39 +118,40 @@ $seo = $job;
                 </div>
             </div>
             <div class="col-lg-2">
-                <div class="navbar-icon">
-                    <div class="selectLanguage">
-                        {{-- <select name="" id="">
-                            <option value="">English</option>
-                            <option value="">Arabic</option>
-                        </select> --}}
-                        <div id="google_element"></div>
-                        <script src="//translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-                        <script>
-                            function loadGoogleTranslate() {
-                                new google.translate.TranslateElement('google_element');
-                            }
-                        </script>
+                <!-- Start Google Translator START-->
+                <style>
+                    #google_translate_element span {
+                        display: none;
+                    }
 
-                        <style>
-                            #google_element span {
-                                display: none;
-                            }
+                    .skiptranslate {
+                        font-size: 0 !important;
+                    }
 
-                            .skiptranslate {
-                                font-size: 0;
-                            }
+                    .skiptranslate div {
+                        font-size: 16px;
+                    }
 
-                            .skiptranslate div {
-                                font-size: 16px;
-                            }
+                    .goog-te-combo {
+                        padding: 6px;
+                    }
 
-                            .goog-te-combo {
-                                padding: 6px;
-                            }
-                        </style>
-                    </div>
-                </div>
+                    .VIpgJd-ZVi9od-ORHb-OEVmcd {)
+                        display: none !important;
+                    }
+
+                    body {
+                        top: 0 !important;
+                    }
+                </style>
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() { new google.translate.TranslateElement( {pageLanguage: 'en'}, 'google_translate_element' ); } setTimeout(() => { const dropdown = document.querySelector('.goog-te-combo'); const optionText = { '': 'Select language', 'en' : 'English', 'af' : 'Afrikaans', 'sq' : 'Albanian', 'am' : 'Amharic', 'ar' : 'Arabic', 'hy' : 'Armenian', 'as' : 'Assamese', 'ay' : 'Aymara', 'az' : 'Azerbaijani', 'bm' : 'Bambara', 'eu' : 'Basque', 'be' : 'Belarusian', 'bn' : 'Bengali', 'bho' : 'Bhojpuri', 'bs' : 'Bosnian', 'bg' : 'Bulgarian', 'ca' : 'Catalan', 'ceb' : 'Cebuano', 'ny' : 'Chichewa', 'zh-CN' : 'Chinese (Simplified)', 'zh-TW' : 'Chinese (Traditional)', 'co' : 'Corsican', 'hr' : 'Croatian', 'cs' : 'Czech', 'da' : 'Danish', 'dv' : 'Dhivehi', 'doi' : 'Dogri', 'nl' : 'Dutch', 'eo' : 'Esperanto', 'et' : 'Estonian', 'ee' : 'Ewe', 'tl' : 'Filipino', 'fi' : 'Finnish', 'fr' : 'French', 'fy' : 'Frisian', 'gl' : 'Galician', 'ka' : 'Georgian', 'de' : 'German', 'el' : 'Greek', 'gn' : 'Guarani', 'gu' : 'Gujarati', 'ht' : 'Haitian Creole', 'ha' : 'Hausa', 'haw' : 'Hawaiian', 'iw' : 'Hebrew', 'hi' : 'Hindi', 'hmn' : 'Hmong', 'hu' : 'Hungarian', 'is' : 'Icelandic', 'ig' : 'Igbo', 'ilo' : 'Ilocano', 'id' : 'Indonesian', 'ga' : 'Irish', 'it' : 'Italian', 'ja' : 'Japanese', 'jw' : 'Javanese', 'kn' : 'Kannada', 'kk' : 'Kazakh', 'km' : 'Khmer', 'rw' : 'Kinyarwanda', 'gom' : 'Konkani', 'ko' : 'Korean', 'kri' : 'Krio', 'ku' : 'Kurdish (Kurmanji)', 'ckb' : 'Kurdish (Sorani)', 'ky' : 'Kyrgyz', 'lo' : 'Lao', 'la' : 'Latin', 'lv' : 'Latvian', 'ln' : 'Lingala', 'lt' : 'Lithuanian', 'lg' : 'Luganda', 'lb' : 'Luxembourgish', 'mk' : 'Macedonian', 'mai' : 'Maithili', 'mg' : 'Malagasy', 'ms' : 'Malay', 'ml' : 'Malayalam', 'mt' : 'Maltese', 'mi' : 'Maori', 'mr' : 'Marathi', 'mni-Mtei' : 'Meiteilon (Manipuri)', 'lus' : 'Mizo', 'mn' : 'Mongolian', 'my' : 'Myanmar (Burmese)', 'ne' : 'Nepali', 'no' : 'Norwegian', 'or' : 'Odia (Oriya)', 'om' : 'Oromo', 'ps' : 'Pashto', 'fa' : 'Persian', 'pl' : 'Polish', 'pt' : 'Portuguese', 'pa' : 'Punjabi', 'qu' : 'Quechua', 'ro' : 'Romanian', 'ru' : 'Russian', 'sm' : 'Samoan', 'sa' : 'Sanskrit', 'gd' : 'Scots Gaelic', 'nso' : 'Sepedi', 'sr' : 'Serbian', 'st' : 'Sesotho', 'sn' : 'Shona', 'sd' : 'Sindhi', 'si' : 'Sinhala', 'sk' : 'Slovak', 'sl' : 'Slovenian', 'so' : 'Somali', 'es' : 'Spanish', 'su' : 'Sundanese', 'sw' : 'Swahili', 'sv' : 'Swedish', 'tg' : 'Tajik', 'ta' : 'Tamil', 'tt' : 'Tatar', 'te' : 'Telugu', 'th' : 'Thai', 'ti' : 'Tigrinya', 'ts' : 'Tsonga', 'tr' : 'Turkish', 'tk' : 'Turkmen', 'ak' : 'Twi', 'uk' : 'Ukrainian', 'ur' : 'Urdu', 'ug' : 'Uyghur', 'uz' : 'Uzbek', 'vi' : 'Vietnamese', 'cy' : 'Welsh', 'xh' : 'Xhosa', 'yi' : 'Yiddish', 'yo' : 'Yoruba', 'zu' : 'Zulu', }; change_here(); dropdown.addEventListener('change', function() { change_here(); }); function change_here(){ setTimeout(() => { const options = dropdown.querySelectorAll('option'); options.forEach(option => { option.textContent = optionText[option.value] || option.value; }); },1000); } },900);
+                </script>
+                <script type="text/javascript"
+                    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                <!-- Start Google Translator END -->
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
@@ -188,29 +189,33 @@ $seo = $job;
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     @foreach($menus as $menu)
-                        @if ($menu->childs->count() > 0)
-                            <div class="nav-item dropdown">
-                                <a href="/{{ $menu->nav_name }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{ $menu->caption }}</a>
-                                    <div class="dropdown-menu m-0">
-                                        @foreach ($menu->childs as $submenu)
-                                        <a href="/{{ $menu->nav_name }}/{{ $submenu->nav_name }}" class="dropdown-item">{{ $submenu->caption }}</a>
-                                        @endforeach
-                                    </div>
-                                </div>
-                        @else
-                            <a href="/{{ $menu->nav_name }}" class="d nav-item nav-link{{ $menu['active'] ? ' active' : '' }}">{{ $menu->caption }}</a>
-                        @endif
+                    @if ($menu->childs->count() > 0)
+                    <div class="nav-item dropdown">
+                        <a href="/{{ $menu->nav_name }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{
+                            $menu->caption }}</a>
+                        <div class="dropdown-menu m-0">
+                            @foreach ($menu->childs as $submenu)
+                            <a href="/{{ $menu->nav_name }}/{{ $submenu->nav_name }}" class="dropdown-item">{{
+                                $submenu->caption }}</a>
+                            @endforeach
+                        </div>
+                    </div>
+                    @else
+                    <a href="/{{ $menu->nav_name }}"
+                        class="d nav-item nav-link{{ $menu['active'] ? ' active' : '' }}">{{ $menu->caption }}</a>
+                    @endif
                     @endforeach
                     <a href="contact" class="nav-item nav-link">Contact</a>
                     {{-- <a href="team" class="nav-item nav-link">Team</a> --}}
                 </div>
-                
-                <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+
+                <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal"
+                    data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
                 <!-- <a href="" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a> -->
             </div>
         </nav>
     </div>
-    
+
     {{-- <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="/" class="navbar-brand p-0">
@@ -222,7 +227,7 @@ $seo = $job;
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="/" class="nav-item nav-link active">Home</a>
-                  
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
                         <div class="dropdown-menu m-0">
@@ -302,14 +307,14 @@ $seo = $job;
                                 <p class="mb-0">{{ $global_setting->phone }}</p>
                             </div>
                             <div class="d-flex mt-4">
-                                <a class="btn btn-primary btn-square me-2" href="{{ $global_setting->twitter ?? '' }}" target="_blank"><i
-                                        class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="{{ $global_setting->facebook ?? '' }}" target="_blank"><i
-                                        class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="{{ $global_setting->linkedin ?? '' }}" target="_blank"><i
-                                        class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square" href="{{ $global_setting->instagram ?? '' }}" target="_blank"><i
-                                        class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="{{ $global_setting->twitter ?? '' }}"
+                                    target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="{{ $global_setting->facebook ?? '' }}"
+                                    target="_blank"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="{{ $global_setting->linkedin ?? '' }}"
+                                    target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="{{ $global_setting->instagram ?? '' }}"
+                                    target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-12 pt-5 mb-5" style="margin-left: 30px;">
@@ -329,14 +334,14 @@ $seo = $job;
                                 <p class="mb-0">{{ $global_setting->phone }}</p>
                             </div>
                             <div class="d-flex mt-4">
-                                <a class="btn btn-primary btn-square me-2" href="{{ $global_setting->twitter ?? '' }}" target="_blank"><i
-                                        class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="{{ $global_setting->facebook ?? '' }}" target="_blank"><i
-                                        class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="{{ $global_setting->linkedin ?? '' }}" target="_blank"><i
-                                        class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square" href="{{ $global_setting->instagram ?? '' }}" target="_blank"><i
-                                        class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="{{ $global_setting->twitter ?? '' }}"
+                                    target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="{{ $global_setting->facebook ?? '' }}"
+                                    target="_blank"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="{{ $global_setting->linkedin ?? '' }}"
+                                    target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="{{ $global_setting->instagram ?? '' }}"
+                                    target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
                             </div>
                         </div>
 
