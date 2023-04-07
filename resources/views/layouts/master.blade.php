@@ -61,7 +61,7 @@ $seo = $job;
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="{{ $global_setting->favicon ?? '' }}" rel="icon">
+    <link href="{{ $seo->banner_image ?? '/uploads/icons/' . $global_setting->favicon }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
