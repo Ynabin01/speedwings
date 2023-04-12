@@ -63,7 +63,7 @@
                         <div class="col-lg-7">
                             <div class="section-title position-relative pb-3 mb-5">
                                 <h5 class="fw-bold text-primary text-uppercase">{{ $normal->caption }}</h5>
-                                <h1 class="mb-0">@php echo $normal->short_content; @endphp</h1>
+                                {{-- <h1 class="mb-0">@php echo $normal->short_content; @endphp</h1> --}}
                             </div>
                             <p class="mb-4">@php echo $normal->long_content; @endphp</p>
                             <!-- <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request

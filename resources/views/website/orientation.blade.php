@@ -31,69 +31,44 @@
         </div>
     </div>
     <!-- Full Screen Search End -->
-
-    <!-- About Start -->
-    <div class="container-fluid  wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-8">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">Orientation</h5>
-                        <!-- <h1 class="mb-0">About Company:</h1> -->
-                    </div>
-                    <div class="col-lg-12" style="min-height: 500px;">
-                        <div class="position-relative h-100">
-                            <img class=" w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="/website/img/blog-1.jpg"
-                                style="object-fit: cover;">
+    
+    @if (@isset($notices))
+        <!-- About Start -->
+        <div class="container-fluid  wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-8">
+                        <div class="section-title position-relative pb-3 mb-5">
+                            <h5 class="fw-bold text-primary text-uppercase">Orientation</h5>
+                            <!-- <h1 class="mb-0">About Company:</h1> -->
                         </div>
+                    {{-- @foreach ($notices as $notice) --}}
+                        <div class="col-lg-12" style="min-height: 500px;">
+                            <div class="position-relative h-100">
+                                <img class=" w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{ $notices->banner_image ?? '' }}"
+                                    style="object-fit: cover;">
+                            </div>
+                        </div>
+                        <p class="mt-4">{!! htmlspecialchars_decode($notices->long_content ?? '') !!}</p>
+                          
+                    {{-- @endforeach --}}
                     </div>
-                    <p class="mt-4">SpeedWings Human Resources Pvt. Ltd. is a leading provider of human resource
-                        services, offering innovative and effective solutions to meet the changing needs of businesses
-                        today. With its head office located in Kathmandu, Nepal, and a growing presence in Dubai, UAE,
-                        SpeedWings is well-positioned to serve clients in a rapidly evolving and dynamic market. The
-                        company was founded with the goal of helping organizations meet their human resource needs by
-                        providing a range of innovative and cost-effective solutions. Today, SpeedWings is widely
-                        recognized for its expertise and commitment to excellence and is trusted by companies of all
-                        sizes and industries to help them attract, retain, and manage their most valuable asset - their
-                        people.</p>
-                    <p class="mt-4">SpeedWings Human Resources Pvt. Ltd. is a leading provider of human resource
-                        services, offering innovative and effective solutions to meet the changing needs of businesses
-                        today. With its head office located in Kathmandu, Nepal, and a growing presence in Dubai, UAE,
-                        SpeedWings is well-positioned to serve clients in a rapidly evolving and dynamic market. The
-                        company was founded with the goal of helping organizations meet their human resource needs by
-                        providing a range of innovative and cost-effective solutions. Today, SpeedWings is widely
-                        recognized for its expertise and commitment to excellence and is trusted by companies of all
-                        sizes and industries to help them attract, retain, and manage their most valuable asset - their
-                        people.</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 ">
-                    <div class="siderbar-link-list">
-                        <h5>OUR SERVICES</h5>
-                        <hr>
-                        <ul>
-                            <li>
-                                <a href="">Introducation</a>
-                            </li>
-                            <li>
-                                <a href="">Chairman Message</a>
-                            </li>
-                            <li>
-                                <a href="">Orientation</a>
-                            </li>
-                            <li>
-                                <a href="">Operation</a>
-                            </li>
-                            <li>
-                                <a href="">Company Documents</a>
-                            </li>
-                            <li>
-                                <a href="">Demand Documents</a>
-                            </li>
-                        </ul>
+                    <div class="col-lg-4 col-md-4 col-sm-12 ">
+                        <div class="siderbar-link-list">
+                            <h5>OUR SERVICES</h5>
+                            <hr>
+                            <ul>
+                                @foreach ($services as $serv ) 
+                                <li>
+                                    <a href="">{{ $serv->caption ?? '' }}</a>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About End -->
+    @endif
+        <!-- About End -->
     @endsection
