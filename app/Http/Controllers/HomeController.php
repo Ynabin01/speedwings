@@ -253,7 +253,7 @@ class HomeController extends Controller
             // return "return to view Job";
             $normal = Navigation::find($category_id);
             // return $normal->childs;
-            return view("website.job-list")->with(['jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail]);
+            return view("website.job-list")->with(['jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail,'slug1'=>$slug1,'slug2'=>$slug2]);
         }
         elseif($category_type == "Notice"){
             // return "return to view Notice";

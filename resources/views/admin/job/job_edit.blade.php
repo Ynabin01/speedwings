@@ -92,46 +92,50 @@
                     <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="posted_on" placeholder="Posted On" value="{{$job->posted_on}}" required="required">
                 </div>
 
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6"> --}}
                     {{-- <label for="caption">Food & Accommodation <i class="reqr">*</i> (Food & Accommodation)</label> --}}
-                    <label for="caption">Food & Accommodation  (Food & Accommodation)</label>
+                    {{-- <label for="caption">Food & Accommodation  (Food & Accommodation)</label>
                     <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="foodaccommondation" placeholder="foodaccommondation" value="{{$job->foodaccommondation}}" >
-                </div>
+                </div> --}}
                 <div class="form-group col-md-6">
                     {{-- <label for="caption">Total Demand <i class="reqr">*</i> (total demand)</label> --}}
                     <label for="caption">Total Demand  (total demand)</label>
                     <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="total_demand" placeholder="tital_demand" value="{{$job->total_demand}}" >
                 </div>
                 <div class="form-group col-md-6">
+                    <label for="caption">minimum_qualification	  <i class="reqr">*</i>(minimum_qualification	 )</label>
+                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="minimum_qualification" placeholder="minimum_qualification" value="{{$job->minimum_qualification	}}" required="required">
+                </div>   
+                {{-- <div class="form-group col-md-6"> --}}
                     {{-- <label for="caption">Working Day <i class="reqr">*</i> (Working Day)</label> --}}
-                    <label for="caption">Working Day  (Working Day)</label>
+                    {{-- <label for="caption">Working Day  (Working Day)</label>
                     <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="working_day" placeholder="working_day" value="{{$job->working_day}}" >
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="caption">Working Hour   (Working Hour )</label>
+                </div> --}}
+                {{-- <div class="form-group col-md-6">
+                    <label for="caption">Working Hour   (Working Hour )</label> --}}
                     {{-- <label for="caption">Working Hour  <i class="reqr">*</i> (Working Hour )</label> --}}
-                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="working_hour" placeholder="working_hour" value="{{$job->working_hour}}" >
-                </div>
-                <div class="form-group col-md-6">
+                    {{-- <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="working_hour" placeholder="working_hour" value="{{$job->working_hour}}" >
+                </div> --}}
+                {{-- <div class="form-group col-md-6"> --}}
                     {{-- <label for="caption">Visa Ticket <i class="reqr">*</i> (Visa Ticket)</label> --}}
-                    <label for="caption">Visa Ticket (Visa Ticket)</label>
-                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="visa_ticket" placeholder="visa_ticket" value="{{$job->visa_ticket}}" >
-                </div>
-                <div class="form-group col-md-6">
+                    {{-- <label for="caption">Visa Ticket (Visa Ticket)</label> --}}
+                    {{-- <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="visa_ticket" placeholder="visa_ticket" value="{{$job->visa_ticket}}" > --}}
+                {{-- </div> --}}
+                {{-- <div class="form-group col-md-6"> --}}
                     {{-- <label for="caption">Service Charge<i class="reqr">*</i> (Service Charge)</label> --}}
-                    <label for="caption">Service Charge (Service Charge)</label>
-                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="service_charge" placeholder="service_charge" value="{{$job->service_charge}}" >
-                </div>
+                    {{-- <label for="caption">Service Charge (Service Charge)</label> --}}
+                    {{-- <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="service_charge" placeholder="service_charge" value="{{$job->service_charge}}" > --}}
+                {{-- </div> --}}
                 <div class="form-group col-md-6">
                     {{-- <label for="caption">LT Number <i class="reqr">*</i> (LT Number)</label> --}}
                     <label for="caption">LT Number (LT Number)</label>
                     <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="lt_number" placeholder="lt_number" value="{{$job->lt_number}}" >
                 </div>
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6"> --}}
                     {{-- <label for="caption">Interview <i class="reqr">*</i> (Interview)</label> --}}
-                    <label for="caption">Interview  (Interview)</label>
-                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="interview" placeholder="interview" value="{{$job->interview}}" >
-                </div>
+                    {{-- <label for="caption">Interview  (Interview)</label> --}}
+                    {{-- <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="caption" name="interview" placeholder="interview" value="{{$job->interview}}" > --}}
+                {{-- </div> --}}
 
                 <div id="url_link_div" class="form-group col-md-10" style="display: none;">
                     <label for="link_url">URL Link <i class="reqr">*</i></label>

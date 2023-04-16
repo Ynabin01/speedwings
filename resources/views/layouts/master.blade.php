@@ -61,7 +61,7 @@ $seo = $job;
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="{{ $seo->banner_image ?? '/uploads/icons/' . $global_setting->favicon }}" rel="icon">
+    <link href="{{ $seo->favicon ?? '/uploads/icons/' . $global_setting->favicon }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -187,7 +187,7 @@ $seo = $job;
                 <span class="fa fa-bars"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="collapse navbar-collapse" id="navbarCollapse"> 
                 <div class="navbar-nav ms-auto py-0">
                     @foreach($menus as $menu)
                     @if ($menu->childs->count() > 0)
@@ -412,6 +412,115 @@ $seo = $job;
     <!-- Footer End -->
 
 
+
+{{-- start apply form --}}
+
+<div class="container">
+    <div class="contact-area-page">
+        <div class="section-title position-relative pb-3 text-center">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+            <!-- <h5 class="fw-bold text-primary text-uppercase">About Us</h5> -->
+            <h1 class="mb-0 text-center">Apply now</h1>
+        </div>
+        <form class="row" action="{{ route('contactstore') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="apply-area">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="apply-form">
+                                <input type="name" class="form-control" id="inputName4" placeholder="Full Name *">
+                            </div>
+
+                        </div>
+
+                        <div class="col-6">
+                            <div class="apply-form">
+                                <input type="Phone" class="form-control" id="inputPhone" placeholder=" Contact Number *">
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="apply-form">
+                                <input type="text" class="form-control" id="inputemail2" placeholder="Permanent Address*">
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="apply-form">
+                                <input type="text" class="form-control" id="inputemail2" placeholder="Permanent Address">
+                            </div>
+
+                        </div>
+                        <div class="col-6">
+                            <div class="apply-form">
+                                <input type="text" class="form-control" id="inputemail2" placeholder="Email Address*">
+                            </div>
+
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control" rows="5" id="comment" name="text"
+                                placeholder="Enter message"></textarea>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group mt-3">
+                                <label class="mr-4">Upload your CV:</label>
+
+                                <div class="file-upload-wrapper" data-text="Select your file!">
+                                    <input name="cvupload[]" type="file" class="file-upload-field" accept="image/*" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-group mt-3">
+                                <label class="mr-4">Upload your Latest Photo:</label>
+                                <div class="file-upload-wrapper" data-text="Select your file!">
+                                    <input name="photoupload[]" type="file" class="file-upload-field" accept="image/*" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group mt-3">
+                                <label class="mr-4">Upload your Scanned Passport:</label>
+                                <div class="file-upload-wrapper" data-text="Select your file!">
+                                    <input name="passportupload[]" type="file" class="file-upload-field" accept="image/*">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mr-auto">
+                            <a class="btn" href="#">Submit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{{-- end applyform --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
@@ -427,6 +536,34 @@ $seo = $job;
 
     <!-- Template Javascript -->
     <script src="/website/js/main.js"></script>
+
+    
+    <script>
+        $(document).ready(function () {
+            // required elements
+            var imgPopup = $(".img-popup");
+            var imgCont = $(".container__img-holderrr");
+            var popupImage = $(".img-popup img");
+            var closeBtn = $(".close-btn");
+
+            // handle events
+            imgCont.on("click", function () {
+                var img_src = $(this).children("img").attr("src");
+                imgPopup.children("img").attr("src", img_src);
+                imgPopup.addClass("opened");
+            });
+
+            $(imgPopup, closeBtn).on("click", function () {
+                imgPopup.removeClass("opened");
+                imgPopup.children("img").attr("src", "");
+            });
+
+            popupImage.on("click", function (e) {
+                e.stopPropagation();
+            });
+        });
+
+    </script>
 </body>
 
 </html>

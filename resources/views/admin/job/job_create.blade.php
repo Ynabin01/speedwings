@@ -80,62 +80,65 @@
                     <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="salary" name="salary" placeholder="salary" value="{{old('salary')}}" required="required">
                 </div>   
 
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6">
                     <label for="caption">Contract Time <i class="reqr">*</i> (Contract Time)</label>
                     <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="contract_time" name="contract_time" placeholder="2 years" value="{{old('contract_time')}}" required="required">
-                </div>   
+                </div>    --}}
 
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6">
                     <label for="caption">deadline  <i class="reqr">*</i>(deadline )</label>
                     <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="deadline" name="deadline" placeholder="deadline " value="{{old('deadline')}}" required="required">
-                </div>   
+                </div>    --}}
 
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6">
                     <label for="caption">Posted On <i class="reqr">*</i> (posted_on)</label>
                     <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="posted_on" name="posted_on" placeholder="posted_on" value="{{old('posted_on')}}" required="required">
-                </div>
-
+                </div> --}}
                 <div class="form-group col-md-6">
+                    <label for="caption">minimum_qualification  <i class="reqr">*</i>(minimum_qualification )</label>
+                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="minimum_qualification" name="minimum_qualification" placeholder="minimum_qualification " value="{{old('minimum_qualification')}}" required="required">
+                </div>  
+                {{-- <div class="form-group col-md-6"> --}}
                     {{-- <label for="caption">Food & Accommodation <i class="reqr">*</i> (Food & Accommodation)</label> --}}
-                    <label for="caption">Food & Accommodation  (Food & Accommodation)</label>
-                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="foodaccommondation" name="foodaccommondation" placeholder="foodaccommondation" value="{{old('foodaccommondation')}}" >
-                </div>
+                    {{-- <label for="caption">Food & Accommodation  (Food & Accommodation)</label> --}}
+                    {{-- <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="foodaccommondation" name="foodaccommondation" placeholder="foodaccommondation" value="{{old('foodaccommondation')}}" > --}}
+                {{-- </div> --}}
                 <div class="form-group col-md-6">
                     {{-- <label for="caption">Total Demand <i class="reqr">*</i> (total demand)</label> --}}
                     <label for="caption">Total Demand  (total demand)</label>
                     <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="total_demand" name="total_demand" placeholder="total_demand" value="{{old('total_demand')}}" >
                 </div>
 
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6"> --}}
                     {{-- <label for="caption">Working Day <i class="reqr">*</i> (Working Day)</label> --}}
-                    <label for="caption">Working Day (Working Day)</label>
-                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="total_demand" name="working_day" placeholder="working_day" value="{{old('working_day')}}" >
-                </div>
-                <div class="form-group col-md-6">
+                    {{-- <label for="caption">Working Day (Working Day)</label> --}}
+                    {{-- <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="total_demand" name="working_day" placeholder="working_day" value="{{old('working_day')}}" > --}}
+                {{-- </div> --}}
+                {{-- <div class="form-group col-md-6"> --}}
                     {{-- <label for="caption">Working Hour<i class="reqr">*</i> (Working Hour)</label> --}}
-                    <label for="caption">Working Hour (Working Hour)</label>
-                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="working_hour" name="working_hour" placeholder="working_hour" value="{{old('working_hour')}}" >
-                </div>
-                <div class="form-group col-md-6">
+                    {{-- <label for="caption">Working Hour (Working Hour)</label> --}}
+                    {{-- <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="working_hour" name="working_hour" placeholder="working_hour" value="{{old('working_hour')}}" > --}}
+                {{-- </div> --}}
+                {{-- <div class="form-group col-md-6"> --}}
                     {{-- <label for="caption">Visa Ticket <i class="reqr">*</i> (Visa Ticket)</label> --}}
-                    <label for="caption">Visa Ticket  (Visa Ticket)</label>
-                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="visa_ticket" name="visa_ticket" placeholder="visa_ticket" value="{{old('visa_ticket')}}" >
-                </div>
-                <div class="form-group col-md-6">
+                    {{-- <label for="caption">Visa Ticket  (Visa Ticket)</label> --}}
+                    {{-- <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="visa_ticket" name="visa_ticket" placeholder="visa_ticket" value="{{old('visa_ticket')}}" > --}}
+                {{-- </div> --}}
+                {{-- <div class="form-group col-md-6"> --}}
                     {{-- <label for="caption">Service Charge <i class="reqr">*</i> (Service Charge)</label> --}}
-                    <label for="caption">Service Charge  (Service Charge)</label>
-                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="service_charge" name="service_charge" placeholder="service_charge" value="{{old('service_charge')}}" >
-                </div>
+                    {{-- <label for="caption">Service Charge  (Service Charge)</label> --}}
+                    {{-- <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="service_charge" name="service_charge" placeholder="service_charge" value="{{old('service_charge')}}" > --}}
+                {{-- </div> --}}
                 <div class="form-group col-md-6">
                     {{-- <label for="caption">LT Number <i class="reqr">*</i> (LT Number)</label> --}}
                     <label for="caption">LT Number  (LT Number)</label>
                     <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="lt_number" name="lt_number" placeholder="lt_number" value="{{old('lt_number')}}" >
                 </div>
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6"> --}}
                     {{-- <label for="caption">Interview <i class="reqr">*</i> (Interview)</label> --}}
-                    <label for="caption">Interview  (Interview)</label>
-                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="interview" name="interview" placeholder="interview" value="{{old('interview')}}" >
-                </div>
+                    {{-- <label for="caption">Interview  (Interview)</label> --}}
+                    {{-- <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="interview" name="interview" placeholder="interview" value="{{old('interview')}}" > --}}
+                {{-- </div> --}}
 
 
 

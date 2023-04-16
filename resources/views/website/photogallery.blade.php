@@ -1,17 +1,7 @@
 @extends("layouts.master")
 
 @section('content')
-
-<div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
-    <div class="row py-5">
-        <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">DOCUMENTS</h1>
-            <a href="/" class="h5 text-white">Home</a>
-            <i class="far fa-circle text-white px-2"></i>
-            <a href="" class="h5 text-white">Documents</a>
-        </div>
-    </div>
-</div>
+@include('website.breadcrumb')
 
 @if (isset($photos))
 <!-- Full Screen Search Start -->
@@ -39,7 +29,7 @@
     <div class="container">
         <div class="Legal-Documents"> 
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Documents</h5>
+                <h5 class="fw-bold text-primary text-uppercase">{{$slug2->caption ?? $slug2}}</h5>
                 <!-- <h1 class="mb-0"></h1> -->
             </div>   
 

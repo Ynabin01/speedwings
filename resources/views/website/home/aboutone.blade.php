@@ -11,7 +11,7 @@
                 <p class="mb-4">{!! htmlspecialchars_decode($about->long_content ?? '') !!}
                 </p>
                 
-                <a href="/" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">View More</a>
+                <a href="/about-us/about-company" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">View More</a>
             </div>
             <div class="col-lg-5" style="min-height: 500px;">
                 <div class="position-relative h-100">
