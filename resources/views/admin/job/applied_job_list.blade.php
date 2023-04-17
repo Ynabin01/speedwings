@@ -63,17 +63,18 @@
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Number</th>
                                 <th>Subject</th>
                                 <th>Message</th>
-                                {{-- <th>Resumes</th>
-                                <th>job title</th> --}}
-                                {{-- <th>company name</th> --}}
-                                {{-- <th>country</th> --}}
-                                {{-- <th>salary</th> --}}
-                                {{-- <th>contract period</th> --}}
-                                {{-- <th>job category</th> --}}
+                                <th>Resumes</th>
+                                <th>job title</th>  
+                                <th>company name</th>  
+                                <th>country</th>  
+                                {{-- <th>salary</th>   --}}
+                                {{-- <th>contract period</th>   --}}
+                                {{-- <th>job category</th>   --}}
                                 <th>Action</th>
-                            </tr>
+                             </tr>
                             </thead>
                             <tbody>
                                 @php use App\Job; @endphp
@@ -83,11 +84,14 @@
                                         <td>{{$contact->id ?? ''}}</td>
                                         <td>{{$contact->first_name ?? ''}}</td>                                     
                                         <td>{{$contact->email ?? ''}}</td>
+                                        <td>{{$contact->number ?? ''}}</td> 
                                         <td>{{$contact->subject ?? ''}}</td>
                                         <td>{{$contact->message ?? ''}}</td>
-                                        {{-- <td><a href="{{$contact->file ?? '#'}}"><button type="button" class="btn btn-danger btn-sm">View</button></td> --}}
-                                        {{-- <td>{{$contact->job_id ?? ''}}</td>
-                                        <td>{{$contact->contract_time ?? ''}}</td>
+                                        <td><a href="{{$contact->file ?? '#'}}"><button type="button" class="btn btn-danger btn-sm">View</button></td>  
+                                        <td>{{$contact->apply_for ?? ''}}</td>
+                                        <td>{{$contact->country ?? ''}}</td>
+                                        <td>{{$contact->job_id ?? ''}}</td> 
+                                        {{-- <td>{{$contact->contract_time ?? ''}}</td>
                                         <td>{{$contact->navigation->short_content ?? ''}}</td>
                                         <td>{{$contact->navigation->caption ?? ''}}</td>
                                         <td>{{$contact->navigation->caption ?? ''}}</td>

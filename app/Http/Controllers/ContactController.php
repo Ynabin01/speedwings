@@ -64,6 +64,18 @@ class ContactController extends Controller
         $menus = Navigation::query()->where('nav_category','Main')->where('page_type','!=','Job')->where('page_type','!=','Photo Gallery')->where('page_type','!=','Notice')->where('parent_page_id',0)->where('page_status','1')->orderBy('position','ASC')->get();
         return view("admin.apply")->with(['menus'=>$menus,'global_setting'=>$global_setting,'job_slug'=>$slug]);
     }
+    public function jobApplyForm()
+    {
+      
+        return view('admin.apply');
+    }
+
+
+
+
+
+
+
     public function ContactStore(Request $req){
         $validated = $req->validate([
             'first_name' => 'required',

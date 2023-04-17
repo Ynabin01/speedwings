@@ -80,10 +80,10 @@
                     <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="salary" name="salary" placeholder="salary" value="{{old('salary')}}" required="required">
                 </div>   
 
-                {{-- <div class="form-group col-md-6">
-                    <label for="caption">Contract Time <i class="reqr">*</i> (Contract Time)</label>
-                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="contract_time" name="contract_time" placeholder="2 years" value="{{old('contract_time')}}" required="required">
-                </div>    --}}
+                <div class="form-group col-md-6">
+                    <label for="caption">number <i class="reqr">*</i> (number)</label>
+                    <input class="form-control {{ $errors->has('caption') ? 'has-error' : '' }}" type="text" id="number" name="number" placeholder="number" value="{{old('number')}}" required="required">
+                </div>   
 
                 {{-- <div class="form-group col-md-6">
                     <label for="caption">deadline  <i class="reqr">*</i>(deadline )</label>

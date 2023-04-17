@@ -67,7 +67,7 @@
                                         </li>
                                     </ul>
                                     <div class="ml-auto">
-                                        <a class="btn" href="/apply">apply now</a>
+                                        <a class="btn" href="/jobapply/{{ $job->nav_name }}">apply now</a>
                                     </div>
                                 </div>
                             </div>
