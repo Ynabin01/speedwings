@@ -68,7 +68,7 @@
                                 <th>Cv</th>
                                 <th>Message</th>
                                 <th>Photo</th>
-                                <th>company name</th>z
+                                <th>company name</th>
                                 <th>Passport</th>
                              </tr>
                             </thead>

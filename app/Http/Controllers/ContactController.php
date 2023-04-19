@@ -76,30 +76,46 @@ class ContactController extends Controller
             // 'number' => 'required', 
          ]);
 
-         if($req->file('file')){
-            $img_file = $req->file('file');
-            $name = "/contact_image/".time().'_'.$img_file->getClientOriginalName();
+         if($req->file('cv')){
+            $img_file = $req->file('cv');
+            $cv = "/contact_image/".time().'_'.$img_file->getClientOriginalName();
             $destinationPath = public_path('contact_image');
-            $img_file->move($destinationPath,$name);
+            $img_file->move($destinationPath,$cv);
          }
          else{
              $name = null;
          }
-       
+        
+         if($req->file('photo')){
+            $img_file = $req->file('photo');
+            $photo = "/contact_image/".time().'_'.$img_file->getClientOriginalName();
+            $destinationPath = public_path('contact_image');
+            $img_file->move($destinationPath,$photo);
+         }
+         else{
+             $name = null;
+         }
+         if($req->file('passport')){
+            $img_file = $req->file('passport');
+            $passport = "/contact_image/".time().'_'.$img_file->getClientOriginalName();
+            $destinationPath = public_path('contact_image');
+            $img_file->move($destinationPath,$passport);
+         }
+         else{
+             $name = null;
+         }
+         
         $contact = new Contact;
         $contact->first_name = $req['first_name'];
         $contact->last_name = $req['last_name'];
         $contact->number = $req['number'];
         $contact->email = $req['email'];
-        $contact->file = $name;
-
-        $contact->cv = $req['cv'];
-        $contact->photo = $req['photo'];
-        $contact->passport = $req['passport'];
-        
+        $contact->cv = $cv;
+        $contact->photo = $photo;
+        $contact->passport = $passport;
         $contact->message = $req['message'];
-        $contact->subject = $req['subject'];
-        $contact->job_id = $req['job_id'];
+        // $contact->subject = $req['subject'];
+        // $contact->job_id = $req['job_id'];
         $contact->save();
 
         if($contact){
