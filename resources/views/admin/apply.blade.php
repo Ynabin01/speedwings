@@ -31,28 +31,21 @@
                 @csrf
 
                 <div class="col-lg-12 col-md-12 col-12">
+                    @if (Session::has('contact'))
+							<p class="alert alert-info">{{ Session::get('contact') }}</p>
+					@endif
                     <div class="apply-area">
                         <div class="row">
                             <div class="col-6">
                                 <div class="apply-form">
                                     <input type="text" class="form-control" name="first_name" id="inputName4" placeholder="Full Name *">
                                 </div>
-                                    <span class="text-danger" style="color: red">
-                                        @error('name')
-                                            {{ $message }}
-                                        @enderror
-                                    </span>
                             </div>
-
+                            <input type="hidden"  name="job_id" value="{{$job_slug}}">
                             <div class="col-6">
                                 <div class="apply-form">
                                     <input type="text" class="form-control" name="number" id="inputPhone" placeholder=" Contact Number *">
                                 </div>
-                                <span class="text-danger" style="color: red">
-                                    @error('number')
-                                        {{ $message }}
-                                    @enderror
-                                </span>
                             </div>
 
                             <div class="col-6">
@@ -66,11 +59,6 @@
                                 <div class="apply-form">
                                     <input type="text" name="email" class="form-control" id="inputemail2" placeholder="Email Address*">
                                 </div>
-                                    <span class="text-danger" style="color: red">
-                                        @error('email')
-                                            {{ $message }}
-                                        @enderror
-                                    </span>
                             </div>
                             <div class="col-12">
                                 <textarea class="form-control" rows="5" name="message" id="comment" name="text"

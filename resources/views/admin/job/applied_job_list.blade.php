@@ -59,49 +59,60 @@
                             <thead>
                                      
                              <tr>
-                                <th>S.NO: #</th>
+                                <th>S.N</th>
                                 <th>ID</th>
+                                <th>Action</th>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Number</th>
-                                <th>cv</th>
-                                <th>photo</th>
-                                <th>passport</th>
-                                {{-- <th>Subject</th> --}}
+                                <th>Cv</th>
                                 <th>Message</th>
-                                <th>Resumes</th>
-                                <th>job title</th>  
-                                <th>company name</th>  
-                                <th>country</th>  
-                                {{-- <th>salary</th>   --}}
-                                {{-- <th>contract period</th>   --}}
-                                {{-- <th>job category</th>   --}}
-                                <th>Action</th>
+                                <th>Photo</th>
+                                <th>company name</th>z
+                                <th>Passport</th>
                              </tr>
                             </thead>
                             <tbody>
                                 @php use App\Job; @endphp
                                 @foreach($contacts as $index=>$contact)
-                                    <tr>
-                                        <td>{{$index+1}}</td>
-                                        <td>{{$contact->id ?? ''}}</td>
+                                <tr>
+                                    <td>{{$index+1}}</td>
+                                    <td>{{$contact->id ?? ''}}</td>
+                                    <td><a href="{{route('contactDelete',$contact->id)}}"><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
                                         <td>{{$contact->first_name ?? ''}}</td>                                     
                                         <td>{{$contact->email ?? ''}}</td>
                                         <td>{{$contact->number ?? ''}}</td> 
-                                        <td>{{$contact->cv ?? ''}}</td>
-                                        <td>{{$contact->photo ?? ''}}</td>
-                                        <td>{{$contact->passport ?? ''}}</td>
+                                        {{-- cv --}}
+                                        <td style="display: flex; align-items:center">
+                                            @if (isset($contact->cv))
+                                            <img src="{{$contact->cv}}" alt="" width="80px" height="100px">
+                                            <a href="{{$contact->cv}}" target="_blank" style="margin-left:5px">
+                                                <button type="button" class="btn btn-danger btn-sm">View</button>
+                                            </a>                                                
+                                            @endif
+                                        </td>
                                         <td>{{$contact->message ?? ''}}</td>
-                                        <td><a href="{{$contact->file ?? '#'}}"><button type="button" class="btn btn-danger btn-sm">View</button></td>  
-                                        <td>{{$contact->apply_for ?? ''}}</td>
-                                        <td>{{$contact->country ?? ''}}</td>
-                                        <td>{{$contact->job_id ?? ''}}</td> 
-                                        {{-- <td>{{$contact->contract_time ?? ''}}</td>
-                                        <td>{{$contact->navigation->short_content ?? ''}}</td>
-                                        <td>{{$contact->navigation->caption ?? ''}}</td>
-                                        <td>{{$contact->navigation->caption ?? ''}}</td>
-                                        <td>{{$contact->navigation->caption ?? ''}}</td> --}}
-                                       <td><a href="{{route('contactDelete',$contact->id)}}"><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
+                                        {{-- photo  --}}
+                                        <td style="display: flex; align-items:center">
+                                            @if (isset($contact->photo))
+                                            <img src="{{$contact->photo}}" alt="" width="80px" height="100px"/>
+                                            <a href="{{$contact->photo}}" style="margin-left:5px">
+                                                <button type="button" class="btn btn-danger btn-sm">View</button>
+                                            </a>                                                
+                                            @endif
+                                        </td>  
+                                        {{-- passport --}}
+                                        <td>{{$contact->getJob->company_name ?? ''}}</td>
+                                        <td style="display: flex; align-items:center">
+                                            @if (isset($contact->passport))
+                                            <img src="{{$contact->passport}}" alt="" width="80px" height="100px">                                                
+                                            <a href="{{$contact->passport}}" style="margin-left:5px">
+                                                <button type="button" class="btn btn-danger btn-sm">View</button>
+                                            </a>                                                
+                                            @endif
+                                        </td> 
+                                        {{-- <td><a href="/jobdetail/{{$contact->getJob->navigation->parents->nav_name ?? ''}}">{{$contact->getJob->navigation->parents->caption ?? ''}}</a></td> --}}
+
                                     </tr>
                                     @endforeach
                             </tbody>

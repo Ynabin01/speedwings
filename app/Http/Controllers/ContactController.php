@@ -15,7 +15,6 @@ use App\Models\Navigation;
 use App\Job;
 use App\Contact;
 
-
 use Mail;
 
 class ContactController extends Controller
@@ -71,8 +70,6 @@ class ContactController extends Controller
         return view('admin.apply');
     }
 
-
-
     public function ContactStore(Request $req){
         $validated = $req->validate([
             'first_name' => 'required',
@@ -88,7 +85,7 @@ class ContactController extends Controller
          else{
              $name = null;
          }
-
+       
         $contact = new Contact;
         $contact->first_name = $req['first_name'];
         $contact->last_name = $req['last_name'];
