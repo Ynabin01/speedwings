@@ -57,7 +57,6 @@
                     <div class="box-body table-responsive">
                         <table id="datatable" class="table table-bordered">
                             <thead>
-                                     
                              <tr>
                                 <th>S.NO: #</th>
                                 <th>ID</th>

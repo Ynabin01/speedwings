@@ -64,7 +64,10 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Number</th>
-                                <th>Subject</th>
+                                <th>cv</th>
+                                <th>photo</th>
+                                <th>passport</th>
+                                {{-- <th>Subject</th> --}}
                                 <th>Message</th>
                                 <th>Resumes</th>
                                 <th>job title</th>  
@@ -85,7 +88,9 @@
                                         <td>{{$contact->first_name ?? ''}}</td>                                     
                                         <td>{{$contact->email ?? ''}}</td>
                                         <td>{{$contact->number ?? ''}}</td> 
-                                        <td>{{$contact->subject ?? ''}}</td>
+                                        <td>{{$contact->cv ?? ''}}</td>
+                                        <td>{{$contact->photo ?? ''}}</td>
+                                        <td>{{$contact->passport ?? ''}}</td>
                                         <td>{{$contact->message ?? ''}}</td>
                                         <td><a href="{{$contact->file ?? '#'}}"><button type="button" class="btn btn-danger btn-sm">View</button></td>  
                                         <td>{{$contact->apply_for ?? ''}}</td>

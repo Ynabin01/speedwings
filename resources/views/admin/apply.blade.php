@@ -23,15 +23,6 @@
         <div class="contact-area-page">
             <div class="section-title position-relative pb-3 text-center">
 
-                @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
 
                 <!-- <h5 class="fw-bold text-primary text-uppercase">About Us</h5> -->
                 <h1 class="mb-0 text-center">Apply now</h1>
@@ -44,7 +35,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="apply-form">
-                                    <input type="name" class="form-control" name="first_name" id="inputName4" placeholder="Full Name *">
+                                    <input type="text" class="form-control" name="first_name" id="inputName4" placeholder="Full Name *">
                                 </div>
                                     <span class="text-danger" style="color: red">
                                         @error('name')
@@ -55,7 +46,7 @@
 
                             <div class="col-6">
                                 <div class="apply-form">
-                                    <input type="Phone" class="form-control" name="number" id="inputPhone" placeholder=" Contact Number *">
+                                    <input type="text" class="form-control" name="number" id="inputPhone" placeholder=" Contact Number *">
                                 </div>
                                 <span class="text-danger" style="color: red">
                                     @error('number')
@@ -90,7 +81,7 @@
                                     <label class="mr-4">Upload your CV:</label>
 
                                     <div class="file-upload-wrapper" data-text="Select your file!">
-                                        <input name="file" type="file" class="file-upload-field" accept="image/*" />
+                                        <input name="cv" type="file" class="file-upload-field" accept="image/*" />
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +90,7 @@
                                 <div class="form-group mt-3">
                                     <label class="mr-4">Upload your Latest Photo:</label>
                                     <div class="file-upload-wrapper" data-text="Select your file!">
-                                        <input name="file" type="file" class="file-upload-field" accept="image/*" />
+                                        <input name="photo" type="file" class="file-upload-field" accept="image/*" />
                                     </div>
                                 </div>
                             </div>
@@ -107,14 +98,19 @@
                                 <div class="form-group mt-3">
                                     <label class="mr-4">Upload your Scanned Passport:</label>
                                     <div class="file-upload-wrapper" data-text="Select your file!">
-                                        <input name="passportupload[]" name="file" type="file" class="file-upload-field" accept="image/*">
+                                        <input name="passport" type="file" class="file-upload-field" accept="image/*">
                                     </div>
                                 </div>
                             </div>
-                            <div class="mr-auto"   >
+                            {{-- <div class="mr-auto"   >
                                 <a class="btn"  href=" ">Submit</a>
-                            </div>
+                            </div> --}}
                           
+
+                            <div class="mr-auto"   >
+                                <button class="btn" type="submit">Submit </button>
+                             </div>
+                           
                         </div>
                     </div>
                 </div>

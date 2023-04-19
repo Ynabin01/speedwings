@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Mail\ContactMail;
+use App\Mail\ApplyMailer;
 use App\Mail\RegisterMail;
 use App\Mail\BookMail;
 use App\Mail\ResponseMail;
@@ -14,6 +14,7 @@ use Session;
 use App\Models\Navigation;
 use App\Job;
 use App\Contact;
+
 
 use Mail;
 
@@ -72,10 +73,6 @@ class ContactController extends Controller
 
 
 
-
-
-
-
     public function ContactStore(Request $req){
         $validated = $req->validate([
             'first_name' => 'required',
@@ -98,14 +95,26 @@ class ContactController extends Controller
         $contact->number = $req['number'];
         $contact->email = $req['email'];
         $contact->file = $name;
+
+        $contact->cv = $req['cv'];
+        $contact->photo = $req['photo'];
+        $contact->passport = $req['passport'];
+        
         $contact->message = $req['message'];
         $contact->subject = $req['subject'];
         $contact->job_id = $req['job_id'];
         $contact->save();
 
         if($contact){
-            // Session::flash('contact', 'Thanks for submitting'); 
-            // return redirect('/');
+            $name = $req['first_name'];
+            $email = $req['email'];
+            $number = $req['number'];
+            $message = $req['message'];
+            $data = compact('name','email','number','message');
+            // if(!isset($req['job_id']))
+            // {
+                Mail::to('nabinyadav365@gmail.com')->send(new ApplyMailer($data));               
+            //  } 
             return redirect()->back()->with('contact', 'Messages sent successfully !!');   
         }
         else{
